@@ -14,9 +14,14 @@
 		echo 'login :'.$data['login'].'<br/>';
 		echo 'mdp :'.$data['mdp'].'<br/><br/>';
 	}
-	//mysqli_query($connect,"INSERT INTO login(login,mdp)VAlUES('Perceval', 'cPasFo')");
-	//mysqli_query($connect, "UPDATE login SET login='Karadoc' WHERE login='Perceval'");
+	mysqli_query($connect,"INSERT INTO login(login,mdp)VAlUES('Perceval', 'cPasFo')");
+	mysqli_query($connect, "UPDATE login SET login='Karadoc' WHERE login='Perceval'");
 	mysqli_query($connect, "DELETE FROM login WHERE idLogin=3 ");
+	?>
+
+	<?php 
+	$pdo = new PDO('mysql:host=localhost;dbname=mybase','root', 'root') or die('Problème de connexion');
+
 	?>
 	
 </body>
